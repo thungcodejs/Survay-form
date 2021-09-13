@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+/*-- VARIABLES CSS--*/
+/*Color*/
+:root {
+  --first-color: #fff;
+  --third-color: #37af65;
+  --found-color: #124112b9;
+}
+/*Survay-form RESPONSIVE*/
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--first-color);
+  margin: 0;
+}
+/*Base*/
+body::before {
+  content: ' ';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-image: linear-gradient(
+    115deg, rgba(155, 142, 142, 0.8), rgba(18, 29, 12, 0.7)
+    ),
+    url(/asset/image/background.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  p {
+    font-size: 1.25rem;
+  }
+  label {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+input,
+button,  
+select, 
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+button {
+  border: none;
+}
+  /*Lay out*/
+  #title,
+  #description {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  #title {
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  #description {
+    font-style: italic;
+    font-weight: 200;
+    text-shadow: 1px 1px 1px rgba(34, 32, 32, 0.4);
+  }
+  .header {
+    padding: 0 0.625rem;
+    margin-bottom: 1.875rem;
+    text-align: center;
+  }
+  .notion {
+    margin-left: 0.25rem;
+    font-size: 1rem;
+    color: var(--first-color);
+  }
+.container {
+  width: 100%;
+  margin: 3.2rem auto 0 auto;
+}
+
+/*===Component===*/
+form {
+  background: var(--found-color);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.25rem;
+}
+@media (min-width: 480px) {
+  form {
+    padding: 2.5rem;
+  }
+}
+.main-group {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
+}
+
+.form-fill {
+  display: block;
+  width: 100%;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  color: #345338;
+  background-color: var(--first-color);
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  transition: border-color 0.10s ease-in-out, box-shadow 0.10s ease-in-out;
+}
+.form-fill:focus {
+  border-color: #1a3623;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(129, 144, 137, 0.25);
+}
+.input_radio, 
+.input_checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+}
+.input_textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 0.5rem;
+  resize: vertical;
+}
+.button-submit {
+  display: block;
+  width: 100%;
+  background-color: #333;
+  color: inherit;
+  border-radius: 3px;
+  padding: 0.75rem;
+  cursor: pointer;
+}
+/*Media Queries*/
+@media (min-width: 576px) {
+  .container {
+    max-width: 530px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+  max-width: 720px;
+  }
+}
